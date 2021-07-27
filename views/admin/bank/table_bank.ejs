@@ -25,8 +25,10 @@
                         <td><%= bank[i].nomorRekening %></td>
                         <td><%= bank[i].name %></td>
                         <td>
-                            <a href=""><i class="fas fa-edit"></i></a>
+                            <form action="">
+                            <a href="javascript:void()" class="btn btn-warning btn-sm btn-circle btn-update"><i class="fas fa-edit"></i></a>
                             <button type="submit" class="btn btn-danger btn-sm btn-circle"><i class="fas fa-trash"></i></button>
+                            </form>
                         </td>
                     </tr>
                     <% } %>

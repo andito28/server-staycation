@@ -83,7 +83,7 @@ module.exports = {
     addBank : async(req,res) => {
         try{
             const {nameBank,nomorRekening,name} = req.body;
-            await Bank.create({nameBank,name,nomorRekening,imageUrl : req.file.filename}); 
+            await Bank.create({nameBank:nameBank,name:name,nomorRekening:nomorRekening,imageUrl : req.file.filename}); 
             req.flash('alertMessage','Success Add Bank');
             req.flash('alertStatus','success');
             res.redirect('/admin/bank');
