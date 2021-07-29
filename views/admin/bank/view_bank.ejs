@@ -71,6 +71,23 @@
     <%- include('./edit_modal.ejs')%>
     <%- include('./add_modal.ejs')%>
 
+    <script>
+        $('#dataTable').on('click','.btn-update',function(){
+            $('#edit-modal').modal('show');
+
+            let name = $(this).data('name');
+            let nameBank = $(this).data('namebank')
+            let nomorRekening = $(this).data('norek');
+            let id = $(this).data('id');
+
+            $('.name').val(name);
+            $('.nameBank').val(nameBank);
+            $('.nomorRekening').val(nomorRekening);
+            $('.id').val(id);
+
+        });
+    </script>
+
 </body>
 
 </html>
