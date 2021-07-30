@@ -30,7 +30,7 @@
                     
                         </td>
                         <td>
-                            <form action="/admin/update/<%=bank[i].id%>?_method=DELETE">
+                            <form action="/admin/bank/<%=bank[i].id%>?_method=DELETE" method="POST">
                             <a href="javascript:void()" class="btn btn-warning btn-sm btn-circle btn-update" data-id="<%=bank[i].id%>"
                                  data-name="<%=bank[i].name%>"  data-namebank="<%=bank[i].nameBank%>" data-norek="<%=bank[i].nomorRekening%>">
                             <i class="fas fa-edit"></i></a>
