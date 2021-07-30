@@ -13,6 +13,7 @@
                         <th>Nama BAnk</th>
                         <th>No Rekening</th>
                         <th>Name</th>
+                        <th>Gambar</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -24,6 +25,10 @@
                         <td><%= bank[i].nameBank %></td>
                         <td><%= bank[i].nomorRekening %></td>
                         <td><%= bank[i].name %></td>
+                        <td>
+                            <img src="http://localhost:3000/<%= bank[i].imageUrl %>" alt="imageUrl" height="70px">
+                    
+                        </td>
                         <td>
                             <form action="/admin/update/<%=bank[i].id%>?_method=DELETE">
                             <a href="javascript:void()" class="btn btn-warning btn-sm btn-circle btn-update" data-id="<%=bank[i].id%>"

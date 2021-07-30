@@ -10,7 +10,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form action="/admin/category?_method=PUT " method="post">
+        <form action="/admin/bank?_method=PUT " method="post" enctype="multipart/form-data">
         <div class="modal-body">
                 <div class="form-group">
                   <label for="name">Name Bank</label>
@@ -26,7 +26,7 @@
                   </div>
                   <div class="form-group">
                     <label for="name">Image</label>
-                    <input type="file" class="form-control"  name="image" required>
+                    <input type="file" class="form-control"  name="image">
                   </div>
                 <input type="hidden" class="id" name="id">
                 <div class="modal-footer">
