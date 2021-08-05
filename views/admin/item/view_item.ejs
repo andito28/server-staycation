@@ -23,6 +23,8 @@
                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">Item</h1>
 
+                    <% if(action == 'view'){ %>
+
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
                           <a class="nav-link active" id="home-tab" data-toggle="tab" href="#show-table-item" role="tab" aria-controls="home" aria-selected="true">Show Item</a>
@@ -34,8 +36,28 @@
                       <div class="tab-content" id="myTabContent">
                         <%- include('./table_item.ejs') %>
                         <%- include('./add_item.ejs') %>
-                        
                       </div>
+                      <% }else if(action == 'show-image') {%>
+
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#show-image" role="tab" aria-controls="home" aria-selected="true">Show Images</a>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                          <%- include('./show_image.ejs') %>
+                        </div>
+
+                      <% }else if(action == 'edit-item') {%>
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#edit-item" role="tab" aria-controls="home" aria-selected="true">Edit item</a>
+                          </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                          <%- include('./edit-item.ejs') %>
+                        </div>
+                      <% } %>
                 </div>
                 <!-- /.container-fluid -->
 
